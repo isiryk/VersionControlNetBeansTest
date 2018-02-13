@@ -16,21 +16,29 @@ public class VersionControlTest {
     /**
      * @param args the command line arguments
      */
-    public void main(String[] args) {
+    public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Please enter 2 numbers");
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
-        System.out.print("Adding " + a + " and " + b + "yields" + add(a,b));
-        System.out.print("Subtracting " + b + " from " + a + "yields" + add(a,b));
+        System.out.println("Do you want to add them or subtract " + b + " from " + a + "?(add/subtract)");
+        String response = scan.nextLine();
+        switch(response){
+        case "add":
+            System.out.print("Adding " + a + " and " + b + "yields" + add(a,b));
+            break;
+        case "subtract":
+            System.out.print("Subtracting " + b + " from " + a + "yields" + add(a,b));
+            break;         
+        }
     }
     
-    public int add(int a, int b){
+    public static int add(int a, int b){
         return a + b;
     }
     
-    public int sub(int a, int b){
+    public static int sub(int a, int b){
         return a - b;
     }
   
