@@ -9,7 +9,7 @@ import java.util.*;
 
 /**
  *
- * @author Kepler
+ * @author Ivan Siryk
  */
 public class VersionControlTest {
 
